@@ -17,6 +17,6 @@ mount -o dev,exec,suid /dev/sdb usb
 
 debootstrap bionic usb
 
-grub-install /dev/sdb
+grub-install --force --removable /dev/sdb
 
 umount /dev/sdb
