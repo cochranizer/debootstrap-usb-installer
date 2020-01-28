@@ -7,4 +7,4 @@ fi
 
 apt install grml-debootstrap
 umount /dev/sdb*
-grml-debootstrap --release buster --target /dev/sdb --grub /dev/sdb
+grml-debootstrap --release bionic --target /dev/sdb --grub /dev/sdb
