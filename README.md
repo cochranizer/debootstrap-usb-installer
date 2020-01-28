@@ -1,5 +1,5 @@
 # debootstrap-usb-installer
-Installs a base Debian/Ubuntu system via bootstrap on USB then installs GRUB.
+Installs a base Debian (Currently working on Ubuntu) system via bootstrap on USB then installs GRUB.
 
 # Instructions
 
