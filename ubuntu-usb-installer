@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running as root"
+    exit
+fi
+
+apt install debootstrap
+
+umount /dev/sdb*
+
+mkfs.ext4 /dev/sdb
+
+mkdir usb
+
+mount -o dev,exec,suid /dev/sdb usb
+
+debootstrap bionic usb
+
+grub-install /dev/sdb
+
+umount /dev/sdb
